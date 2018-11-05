@@ -46,13 +46,72 @@ import sklearn
 
 ### 数据集详细介绍
 
-#### 波士顿房价数据集
+加载相关数据集 `from sklearn.datasets import load_数据集名称`
+
+#### 波士顿房价数据集 boston
 包含506组数据，每条数据包含房屋及房屋周围的详细信息。
 其中包括城镇犯罪率、一氧化氮浓度、住宅平均房间数等。
 因此，波士顿房价数据集能够应用到 **回归** 问题上。
 
-加载波士顿数据集 ``
+**重要参数**
 
-重要参数：
-return_X_y: 表示是否返回target（即价格），默认为False，只返回data（即属性）
+**return_X_y** 若为True，则返回(data, target即价格)；
+默认为False，只返回data即属性。
 
+加载波士顿房价数据集【False】
+```
+from sklearn.datasets import load_boston
+boston = load_boston()
+print(boston.data.shape)
+结果：(506, 13)
+```
+加载波士顿房价数据集【True】
+```
+from sklearn.datasets import load_boston
+data, target = load_boston(return_X_y=True)
+print(data.shape)
+print(target.shape)
+结果：(506, 13)
+结果：(506)
+```
+
+#### 鸢尾花数据集 iris
+采集的是鸢尾花的测量数据及其所归属的类别。
+测量数据包括：萼片长度、萼片宽度、花瓣长度、花瓣宽度。
+类别分为Iris Setosa、Iris Versicolour、Iris Virginica。
+该数据集可用于 **多分类** 问题。
+
+**重要参数**
+
+**return_X_y** 若为True，则以 **(data, target)** 形式返回数据；
+默认为False，则以 **字典** 形式返回数据全部信息（包括data和target）。
+
+#### 手写数字数据集 digits
+包括1797个0-9的手写数字数据，每个数字由8乘8大小的矩阵构成，
+矩阵中值的范围是0-16，代表颜色的深度。
+
+**重要参数**
+
+**return_X_y** 若为True，则以 **(data, target)** 形式返回数据；
+默认为False，则以 **字典** 形式返回数据全部信息（包括data和target）。
+
+**n_class** 表示返回数据的类别数，如：n_class=5，则返回0到4的数据样本。
+
+```
+from sklearn.datasets import load_digits
+digits = load_digits()
+print(digits.data.shape)
+结果：(1797, 64)
+print(digits.target.shape)
+结果：(1797,)
+print(digits.images.shape)
+结果：(1797, 8, 8)
+```
+利用matplotlib以图像形式展示
+```
+import matplotlib.pyplot as plt
+plt.matshow(digits.images[0])
+plt.show()
+```
+结果：
+![image of digits](Images/sklearn_datasets_digits_0.png)
