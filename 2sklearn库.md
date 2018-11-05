@@ -39,7 +39,7 @@ import matplotlib
 import sklearn
 ```
 
-## 三、sklearn标准数据集及基本功能
+## 三、sklearn标准数据集
 
 ### 数据集总览
 ![overview of datasets](Images/datasets_overview.png)
@@ -114,4 +114,17 @@ plt.matshow(digits.images[0])
 plt.show()
 ```
 结果：
+
 ![image of digits](Images/sklearn_datasets_digits_0.png)
+
+## 四、sklearn库的基本功能
+### 分类任务
+![fenlei](Images/fenlei.png)
+### 回归任务
+![huigui](Images/huigui.png)
+### 聚类任务
+![julei](Images/julei.png)
+### 降维任务
+![jiangwei](Images/jiangwei.png)
+### 模型选择（本课程不涉及）
+### 数据的预处理（本课程不涉及）
