@@ -38,3 +38,18 @@ import numpy
 import matplotlib
 import sklearn
 ```
+
+## 三、sklearn标准数据集及基本功能
+
+### 数据集总览
+![overview of datasets](../Images/datasets_overview.png)
+
+### 数据集详细介绍
+
+* 波士顿房价数据集
+
+包含506组数据，每条数据包含房屋及房屋周围的详细信息。
+其中包括城镇犯罪率、一氧化氮浓度、住宅平均房间数等。
+因此，波士顿房价数据集能够应用到 **回归** 问题上。
+
+
